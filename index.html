@@ -8,6 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
     <body>
+      <div class="top">
+        <!-- Logo -->
+        <img src="logo.png" alt="Logo" class="logo">
+    
+        <!-- Tombol -->
+        <div class="button-top">
+          <a href="linkanda" class="btn btn-primary">Home</a>
+        </div>
+      </div>
     <div class="container">
     <div class="title"style="text-align: center;">Form Order</div>
     <div class="content">
@@ -56,34 +65,39 @@
             <select type="pembayaran" id="pembayaran" name="Pembayaran" class="form-control" placeholder="Pilih pembayaran" required>
                 <option>--Pilih Pembayaran--</option>
                 <option>Tunai</option>
-                <option>Non-Tunai</option>
+                <option>Transfer</option>
             </select>
             </div>
-       <div class="input-box">
-          <label for="upload" class="form-label">Upload Bukti Pembayaran</label>
-          <input required id="upload" name="upload" type="file"/>
-        </div>
-        <div class="button"style="width: 100%;">
-            <input type="button"  value="KIRIM DATA" onclick="UploadFile();" />
+            <div class="mase">
+              <p class="info">NB: Untuk melakukan booking jasa kami, harap membayar DP sebesar Rp 50.000</p>
+              <p style="font-weight: 700; color: brown;">Transfer:</p>
+              <p>BRI - 0872 0105 1333 536 (An. Akhmad Ardiyansyah)</p>
+              <p>Mandiri - 90000 43583 054 (An. Akhmad Ardiyansyah)</p>
+            </div>
+            <div class="input-box">
+              <label for="upload" class="form-label">Upload Bukti Pembayaran</label>
+              <input required id="upload" name="upload" type="file"/>
+            </div>
+            <div class="button" style="width: 100%;">
+              <input type="button" value="KIRIM DATA" onclick="UploadFile();" />
             </div>
             <div>
-       <button class="btn btn-danger" type="reset">RESET FORM</button>
-           </div>
-    <div class="loader">
-      <div class="spinner"></div>
-    </div>
-    <div class="not">
-      <div class="message">
-        <a>Data anda telah terkirim.</a>
-        <input type="button" value="Selesai" id="wawa_wa" onclick="KirimWawa();">
+              <button class="btn btn-danger" type="reset">RESET FORM</button>
+            </div>
+            <div class="loader">
+              <div class="spinner"></div>
+            </div>
+            <div class="not">
+              <div class="message">
+                <a>Data anda telah terkirim.</a>
+                <input type="button" value="Selesai" id="wawa_wa" onclick="KirimWawa();">
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
+  </div>
 <script>
 function UploadFile() {
   var reader = new FileReader();
