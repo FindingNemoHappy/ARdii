@@ -6,15 +6,54 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(135deg, #71b7e6, #2874A6);
+  background: linear-gradient(135deg, #0f0f0f, #313436);
 }
+
+.top {
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Pastikan div top lebar penuh */
+  max-width: fit-content; /* Sesuaikan dengan lebar container */
+  margin-bottom: 20px;
+  gap: 150px;
+  background-color: #2e2d2d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  height: auto;
+}
+
+.button-top .btn {
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.button-top .btn:hover {
+  background-color: #ffffff;
+  color: #2874A6;
+}
+
 .container{
-  max-width: 700px;
+  max-width: 900px;
   width: 100%;
   background-color: #fff;
   padding: 5px 30px;
@@ -25,7 +64,7 @@ body{
   font-size: 25px;
   font-weight: 500;
   position: relative;
-  color: #2874A6;
+  color: #000000;
 }
 .container .title::before{
   content: "";
@@ -35,7 +74,7 @@ body{
   height: 3px;
   width: 90px;
   border-radius: 5px;
-  background: linear-gradient(135deg, #71b7e6, #2874A6);
+  background: linear-gradient(135deg, hsl(0, 97%, 14%), #929496);
 }
 .content form .user-details{
   display: flex;
@@ -65,7 +104,7 @@ form .input-box span.details{
 }
 .user-details .input-box input:focus,
 .user-details .input-box input:valid{
-  border-color: #2874A6;
+  border-color: #3a0000;
 }
 form .button{
   height: 45px;
@@ -82,10 +121,24 @@ form .button input{
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, #71b7e6, #2874A6);
+  background: linear-gradient(135deg, #000000, #000000);
 }
+
+.form-label{
+  color: #000000;
+  font-weight: 550;
+}
+
+.form-control{
+  font-weight: 900;
+}
+
 form .button input:hover{
-  background: linear-gradient(-135deg, #71b7e6, #2874A6);
+  background: linear-gradient(-135deg, #270101, #290101);
+}
+
+.info{
+  text-align: justify;
 }
 @media(max-width: 584px){
   .container{
@@ -131,6 +184,14 @@ form .button input:hover{
   animation: spin 1s linear infinite;
 }
 
+.mase p {
+  margin-top: -10px;
+}
+img{
+  width: 100%;
+  max-width: 50px;
+  max-height: 50px;
+}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -177,5 +238,5 @@ form .button input:hover{
 } */
 
 .input-box label[for="upload"]:hover {
-  background-color: #71b7e6;
+  background-color: #000000;
 }
