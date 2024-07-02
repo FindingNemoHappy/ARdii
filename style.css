@@ -5,13 +5,16 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body{
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
   background: linear-gradient(135deg, #0f0f0f, #313436);
+  overflow-x: hidden; /* Sembunyikan overflow horizontal */
 }
 
 .top {
@@ -140,6 +143,21 @@ form .button input:hover{
 .info{
   text-align: justify;
 }
+
+@media (max-width: 768px) {
+  .top {
+    gap: 40px;
+  }
+
+  .container {
+    padding: 5px 15px; /* Kurangi padding pada layar kecil */
+  }
+
+  .button-top .btn {
+    padding: 5px 10px; /* Kurangi padding pada tombol pada layar kecil */
+  }
+}
+
 @media(max-width: 584px){
   .container{
     max-width: 100%;
@@ -159,6 +177,17 @@ form .button input:hover{
 @media(max-width: 459px){
   .container .content .category{
     flex-direction: column;
+  }
+}
+
+@media(max-width: 375px){
+  .top {
+    gap: unset;
+  }
+  
+  .logo {
+  scale:0.8 ;
+  margin-left: -20px;
   }
 }
 
